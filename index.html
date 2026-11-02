@@ -1,0 +1,124 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#090909">
+<title>DRAGONHEN - PS4 HOST</title>
+<style>
+*{box-sizing:border-box}
+body{
+ margin:0;
+ background:#090909;
+ color:#fff;
+ font-family:Arial,sans-serif;
+ text-align:center;
+}
+header{
+ padding:35px 15px;
+ background:linear-gradient(180deg,#350000,#090909);
+ border-bottom:2px solid #e00000;
+}
+h1{
+ color:#ff2525;
+ font-size:38px;
+ letter-spacing:4px;
+ margin:0;
+ text-shadow:0 0 15px red;
+}
+header p{color:#ccc;letter-spacing:2px}
+main{padding:25px 15px;max-width:650px;margin:auto}
+.panel{
+ background:#171717;
+ border:1px solid #7b1111;
+ border-radius:12px;
+ padding:22px;
+ margin:20px 0;
+}
+h2{color:#ff3030}
+select,button{
+ width:100%;
+ padding:15px;
+ margin-top:12px;
+ border-radius:8px;
+ font-size:16px;
+}
+select{
+ background:#222;
+ color:white;
+ border:1px solid #a52222;
+}
+button{
+ background:#b90000;
+ color:white;
+ border:0;
+ font-weight:bold;
+ cursor:pointer;
+}
+button:active{background:#650000}
+#status{color:#ff7777;margin-top:18px}
+footer{padding:25px;color:#777;font-size:12px}
+</style>
+</head>
+<body>
+<header>
+<h1>🐉 DRAGONHEN</h1>
+<p>PLAYSTATION 4 HOST</p>
+</header>
+<main>
+<div class="panel">
+<h2>FIRMWARE</h2>
+<p>Selecione a versão do sistema do seu PS4:</p>
+<select id="firmware">
+<option value="">Selecionar firmware</option>
+<option>5.05</option>
+<option>6.72</option>
+<option>7.02</option>
+<option>7.50</option>
+<option>7.55</option>
+<option>8.00</option>
+<option>8.03</option>
+<option>8.50</option>
+<option>9.00</option>
+<option>9.03</option>
+<option>9.50</option>
+<option>9.60</option>
+<option>10.00</option>
+<option>10.01</option>
+<option>11.00</option>
+<option>11.02</option>
+<option>11.50</option>
+<option>11.52</option>
+<option>12.00</option>
+<option>12.02</option>
+<option>12.50</option>
+<option>12.52</option>
+<option>13.00</option>
+<option>13.02</option>
+<option>13.50</option>
+<option>13.52</option>
+<option>14.00</option>
+</select>
+<button onclick="selecionar()">CONTINUAR</button>
+<p id="status">Aguardando seleção de firmware.</p>
+</div>
+</main>
+<footer>
+DRAGONHEN © 2026<br>
+Projeto independente para PS4
+</footer>
+<script>
+function selecionar(){
+ const fw=document.getElementById("firmware").value;
+ const status=document.getElementById("status");
+ if(!fw){
+  status.textContent="Selecione um firmware primeiro.";
+  return;
+ }
+ status.textContent="Firmware selecionado: "+fw+
+ ". A compatibilidade das ferramentas ainda precisa ser verificada.";
+}
+</script>
+</body>
+</html>
