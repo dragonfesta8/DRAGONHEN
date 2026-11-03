@@ -110,14 +110,22 @@ Projeto independente para PS4
 </footer>
 <script>
 function selecionar(){
- const fw=document.getElementById("firmware").value;
- const status=document.getElementById("status");
+ const fw = document.getElementById("firmware").value;
+ const status = document.getElementById("status");
+
  if(!fw){
-  status.textContent="Selecione um firmware primeiro.";
+  status.textContent = "Selecione um firmware primeiro.";
   return;
  }
- status.textContent="Firmware selecionado: "+fw+
- ". A compatibilidade das ferramentas ainda precisa ser verificada.";
+
+ if(fw === "12.52"){
+  status.textContent = "Abrindo host DRAGONHEN para firmware 12.52...";
+  window.location.href = "./host/";
+  return;
+ }
+
+ status.textContent = "Firmware " + fw +
+ ". A integração ainda não foi configurada para esta versão.";
 }
 </script>
 </body>
