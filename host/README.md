@@ -20,7 +20,7 @@ The chain is selected automatically from the browser's User-Agent.
 | 12.50 | poops | Yes |
 | 12.52 | poops | Yes |
 | 13.00 | poops | Yes |
-
+| 14.00 | poops | Yes |
 ## Usage
 
 1. Open the browser on your PS4 and go to https://rawgame4.github.io/
