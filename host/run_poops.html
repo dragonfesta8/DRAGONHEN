@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-BR" manifest="cache.appcache">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>DRAGONHEN - POOPS</title>
+<style>
+*{box-sizing:border-box}
+html,body{
+ margin:0;padding:0;
+ background:#090909;color:#eee;
+ font:15px/1.45 Arial,sans-serif;
+}
+#brand{
+ text-align:center;padding:18px 10px;
+ background:linear-gradient(180deg,#350000,#090909);
+ border-bottom:2px solid #e00000;
+}
+#brand b{
+ font-size:22px;letter-spacing:4px;
+ color:#ff2525;text-shadow:0 0 12px red;
+}
+#wrap{padding:18px}
+#state{
+ font-size:22px;font-weight:bold;
+ color:#ff3030;margin-bottom:12px;
+}
+#out{
+ white-space:pre-wrap;
+ font:12px/1.45 Consolas,monospace;
+ background:#151515;border:1px solid #7b1111;
+ border-radius:8px;padding:12px;
+ height:calc(100vh - 145px);overflow-y:auto;
+}
+.ok{color:#7fd0a0}
+.bad{color:#ff7777}
+.warn{color:#ffd166}
+</style>
+</head>
+<body>
+<div id="brand"><b>🐉 DRAGONHEN</b></div>
+<div id="wrap">
+ <div id="state">loading poops chain...</div>
+ <div id="out"></div>
+</div>
+<script type="module">import "./chain_poops.js";</script>
+</body>
+</html>
